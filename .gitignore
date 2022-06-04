@@ -1,0 +1,4 @@
+# GraphQL Server
+graphql-server/node_modules
+.build
+
