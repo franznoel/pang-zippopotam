@@ -1,13 +1,30 @@
 {
   "compilerOptions": {
-    "module": "Node16",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "outDir": ".build",
-    "sourceMap": true
+    "sourceMap": true,
+    "paths": {
+      "@resolvers/*": ["./src/apollo-graphql/resolvers/*"],
+      "@typeDefs/*": ["./src/apollo-graphql/typeDefs/*"],
+      "@models/*": ["./src/models/*"],
+      "@controllers/*": ["./src/controllers/*"]
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": [
+    "src/**/*",
+    "src/graphql/index.ts",
+    "src/controllers/**/*",
+    "src/models/**/*"
+  ],
+  "exclude": [
+    "node_modules/**",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts",
+    "**/*.spec.ts"
+  ]
 }
