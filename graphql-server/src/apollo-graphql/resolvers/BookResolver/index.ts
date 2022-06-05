@@ -1,9 +1,9 @@
+import { Book } from '@apolloGql/generated.types'
 import { getBooks } from '@controllers/books'
-import { iBooks } from '@interfaces/iBooks'
 
 export const BooksResolver = {
   Query: {
-    books: (): iBooks[] => {
+    books: (): Book[] => {
       const books = getBooks()
       return books
     }

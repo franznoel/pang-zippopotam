@@ -1,7 +1,7 @@
-import { iBooks } from '@interfaces/iBooks'
+import { Book } from '@apolloGql/generated.types'
 import { BooksModel } from '@models/BooksModel'
 
-export const getBooks = (): iBooks[] => {
+export const getBooks = (): Book[] => {
   const allBooks = BooksModel.getAllBooks()
   return allBooks
 }

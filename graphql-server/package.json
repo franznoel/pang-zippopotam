@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently npm:start:graphql npm:generate-types",
     "start": "ts-node -r tsconfig-paths/register src/apollo-graphql/index.ts",
+    "start:graphql": "ts-node -r tsconfig-paths/register src/apollo-graphql/index.ts",
     "test:integ": "ts-node -r tsconfig-paths/register node_modules/.bin/jest \".integ\\.test\\.ts\" --runInBand --verbose",
     "linter": "eslint . --fix --ext .ts --ext .tsx",
     "prettier": "prettier .",
-    "generate-types": "graphql-codegen -r dotenv/config",
-    "graphql-codegen": "graphql-codegen ",
-    "prepare": "husky install"
+    "generate-types": "graphql-codegen -r dotenv/config"
   },
   "keywords": [],
   "author": "Franz Noel Tanglao <franz@tanglao.org>",
@@ -24,9 +24,12 @@
     "graphql": "16.5.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/typescript": "2.4.11",
     "@types/jest": "28.1.1",
     "@typescript-eslint/eslint-plugin": "5.27.0",
     "@typescript-eslint/parser": "5.27.0",
+    "concurrently": "7.2.1",
     "eslint": "8.17.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.26.0",

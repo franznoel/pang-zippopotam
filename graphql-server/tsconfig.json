@@ -16,7 +16,7 @@
       "@controllers/*": ["./src/controllers/*"],
       "@interfaces/*": ["./src/interfaces/*"],
       "@services/*": ["./src/services/*"],
-      "@utils/*": ["./src/utils/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": [

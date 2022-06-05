@@ -21,7 +21,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'error'
   },
-  ignorePatterns: ['**/*.integ.test.ts', 'node_modules/**/*.ts'],
+  ignorePatterns: ['**/*.integ.test.ts', 'node_modules/**/*.ts', '**/apollo-graphql/generated.types.ts'],
   overrides: [
     {
       files: ['.prettierrc', 'src/lambda/**/*.json', 'src/**/*.ts', 'src/**/*.integ.test.ts']

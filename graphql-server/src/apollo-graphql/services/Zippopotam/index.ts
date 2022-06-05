@@ -1,12 +1,13 @@
-import { iUsPlace, iZippoInfo, iZippoUsPlace } from '@interfaces/iZippoInfo'
+import { ZippoInfo, ZippoUsPlace } from '@apolloGql/generated.types'
+import { iZippoUsPlace } from '@interfaces/iZippoInfo'
 import axios from 'axios'
 
-export const getZippoInfo = async (countryCode: string, postalCode: string): Promise<iZippoInfo> => {
+export const getZippoInfo = async (countryCode: string, postalCode: string): Promise<ZippoInfo> => {
   const zippoInfo = (await axios.get(`http://api.zippopotam.us/${countryCode}/${postalCode}`)
-    .then((response): iZippoInfo => {
+    .then((response): ZippoInfo => {
       const { data } = response
 
-      const newPlaces: iUsPlace[] = data.places.map((place: iZippoUsPlace) => {
+      const newPlaces = data.places.map((place: iZippoUsPlace) => {
         const { latitude, longitude, state } = place
         return {
           latitude,
@@ -14,7 +15,7 @@ export const getZippoInfo = async (countryCode: string, postalCode: string): Pro
           state,
           placeName: place['place name'],
           stateAbbreviation: place['state abbreviation']
-        }
+        } as ZippoUsPlace
       })
 
       return {
@@ -22,10 +23,10 @@ export const getZippoInfo = async (countryCode: string, postalCode: string): Pro
         countryAbbreviation: data['country abbreviation'],
         postCode: data['post code'],
         places: newPlaces
-      } as iZippoInfo
+      } as ZippoInfo
     })
     .catch((error) => {
       console.error(error)
-    })) as iZippoInfo
-  return zippoInfo
+    }))
+  return zippoInfo as ZippoInfo
 }

@@ -1,10 +1,10 @@
-import { iBooks } from '@interfaces/iBooks'
+import { Book } from '@apolloGql/generated.types'
 
-export class BooksModel implements iBooks {
+export class BooksModel implements Book {
   title: string
   author: string
 
-  static getAllBooks (): iBooks[] {
+  static getAllBooks (): Book[] {
     return [
       {
         title: 'The Awakening',

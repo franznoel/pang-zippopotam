@@ -1,6 +1,7 @@
 import { mergeTypeDefs } from '@graphql-tools/merge'
-import { BooksType } from './BooksType'
+import { Book } from './BookType'
+import { ZippoInfo } from './ZippoInfoType'
 
-export const typeDefs = mergeTypeDefs([BooksType])
+export const typeDefs = mergeTypeDefs([ZippoInfo, Book])
 
 export default typeDefs
