@@ -1,15 +1,19 @@
+import { iBooks } from '@interfaces/iBooks'
 
-export class BooksModel {
-  static getAllBooks() {
+export class BooksModel implements iBooks {
+  title: string
+  author: string
+
+  static getAllBooks (): iBooks[] {
     return [
       {
         title: 'The Awakening',
-        author: 'Kate Chopin',
+        author: 'Kate Chopin'
       },
       {
         title: 'City of Glass',
-        author: 'Paul Auster',
-      },
+        author: 'Paul Auster'
+      }
     ]
   }
 }

@@ -15,11 +15,10 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-    "eol-last": "error",
-    "no-return-await": "error",
-    "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "error",
-    "no-console": "error"
+    'eol-last': 'error',
+    'no-return-await': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'error'
   }
-}
+};

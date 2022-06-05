@@ -11,7 +11,8 @@
       "@resolvers/*": ["./src/apollo-graphql/resolvers/*"],
       "@typeDefs/*": ["./src/apollo-graphql/typeDefs/*"],
       "@models/*": ["./src/models/*"],
-      "@controllers/*": ["./src/controllers/*"]
+      "@controllers/*": ["./src/controllers/*"],
+      "@interfaces/*": ["./src/interfaces/*"]
     }
   },
   "include": [
