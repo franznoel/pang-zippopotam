@@ -10,6 +10,8 @@ module.exports = {
     '@resolvers/(.*)': '<rootDir>/src/apollo-graphql/resolvers/$1',
     '@interfaces/(.*)': '<rootDir>/src/interfaces/$1',
     '@typeDefs/(.*)': '<rootDir>/src/apollo-graphql/typeDefs/$1',
-    '@controllers/(.*)': '<rootDir>/src/controllers/$1'
+    '@controllers/(.*)': '<rootDir>/src/controllers/$1',
+    '@services/(.*)': '<rootDir>/src/services/$1',
+    '@utils/(.*)': '<rootDir>/src/utils/$1'
   }
 }

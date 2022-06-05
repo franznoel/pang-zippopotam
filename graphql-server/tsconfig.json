@@ -7,6 +7,7 @@
     "preserveConstEnums": true,
     "outDir": ".build",
     "sourceMap": true,
+    "skipLibCheck": true,
     "paths": {
       "@apolloGql/*": ["./src/apollo-graphql/*"],
       "@resolvers/*": ["./src/apollo-graphql/resolvers/*"],
@@ -14,6 +15,8 @@
       "@models/*": ["./src/models/*"],
       "@controllers/*": ["./src/controllers/*"],
       "@interfaces/*": ["./src/interfaces/*"],
+      "@services/*": ["./src/services/*"],
+      "@utils/*": ["./src/utils/*"],
     }
   },
   "include": [

@@ -7,7 +7,7 @@
   "printWidth": 100,
   "overrides": [
     {
-      "files": [".prettierrc"],
+      "files": [".prettierrc", "src/**/*.ts", "src/**/*.integ.test.ts"],
       "options": { "parser": "json" }
     }
   ]
