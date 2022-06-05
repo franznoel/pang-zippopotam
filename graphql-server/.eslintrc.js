@@ -20,5 +20,11 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'error'
-  }
-};
+  },
+  ignorePatterns: ['**/*.integ.test.ts'],
+  overrides: [
+    {
+      files: ['.prettierrc', 'src/lambda/**/*.json']
+    }
+  ]
+}

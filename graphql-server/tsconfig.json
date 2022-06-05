@@ -8,18 +8,22 @@
     "outDir": ".build",
     "sourceMap": true,
     "paths": {
+      "@apolloGql/*": ["./src/apollo-graphql/*"],
       "@resolvers/*": ["./src/apollo-graphql/resolvers/*"],
       "@typeDefs/*": ["./src/apollo-graphql/typeDefs/*"],
       "@models/*": ["./src/models/*"],
       "@controllers/*": ["./src/controllers/*"],
-      "@interfaces/*": ["./src/interfaces/*"]
+      "@interfaces/*": ["./src/interfaces/*"],
     }
   },
   "include": [
+    "**/*.ts",
     "src/**/*",
-    "src/graphql/index.ts",
+    "src/apollo-graphql/index.ts",
     "src/controllers/**/*",
-    "src/models/**/*"
+    "src/models/**/*",
+    "src/interfaces/**/*",
+    "src/apollo-graphql/resolvers/**/*"
   ],
   "exclude": [
     "node_modules/**",
