@@ -1,5 +1,5 @@
 import { QueryZippoInfoArgs, ZippoInfo } from '@apolloGql/generated.types'
-import { getZippoInfo } from '@apolloGql/services/Zippopotam'
+import { getZippoInfo } from '@services/Zippopotam'
 import { GraphQLCompositeType } from 'graphql'
 
 export const ZippopotamResolver = {
