@@ -1,8 +1,8 @@
 import { getZippoInfo } from "."
 
-describe('Zippopotam', () => {
+describe('Services: Zippopotam', () => {
   describe('getZippoInfo()', () => {
-    it('Should get country info', async () => {
+    it('Should get US country info', async () => {
       const {
         country,
         countryAbbreviation,

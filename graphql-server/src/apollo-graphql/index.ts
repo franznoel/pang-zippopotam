@@ -11,7 +11,9 @@ const schema = makeExecutableSchema({
 const server = new ApolloServer({ schema })
 
 server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`)
+  if (process.env.NODE_ENV !== 'test') {
+    console.log(`🚀  Server ready at ${url}`)
+  }
 })
 
 // TODO: Set up dotenv

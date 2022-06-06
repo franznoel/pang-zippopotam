@@ -27,6 +27,6 @@ export const getZippoInfo = async (countryCode: string, postalCode: string): Pro
     })
     .catch((error) => {
       console.error(error)
-    }))
-  return zippoInfo as ZippoInfo
+    })) as ZippoInfo
+  return zippoInfo
 }
