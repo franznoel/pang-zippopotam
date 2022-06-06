@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from 'react'
-import { Alert, Box, Button, Card, CardContent, CardHeader, CircularProgress, Container, Divider, Grid, MenuItem, Paper, Select, SelectChangeEvent, TextField, Typography } from '@mui/material';
+import React, {useState } from 'react'
+import { Alert, Button, Card, CardContent, CardHeader, CircularProgress, Container, Divider, Grid, MenuItem, Paper, Select, SelectChangeEvent, TextField, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import countryCodes from 'src/data/countryCodes';
 import { GET_ZIPPO_INFO } from 'src/gql/queries/zippoInfo';
@@ -12,7 +12,7 @@ export function Zippopotam () {
   const [country, setCountry] = useState('US')
   const [postalCode,] = useState('91405')
 
-  const { loading, error, data, refetch } = useQuery(GET_ZIPPO_INFO, {
+  const { loading, data, refetch } = useQuery(GET_ZIPPO_INFO, {
     variables: { countryCode: 'US', postalCode: '91405' },
   })
 
@@ -32,7 +32,6 @@ export function Zippopotam () {
     setCountry(event.target.value)
   };
 
-  console.log('country', country)
   return (
     <Container maxWidth="lg">
       <Paper elevation={0}>
@@ -99,7 +98,7 @@ export function Zippopotam () {
         )}
         {data && !data.zippoInfo && (
           <Grid container spacing={2} padding={5}>
-            <Alert severity="error" style={{ width: '100%' }}>Error! No data found using</Alert>
+            <Alert severity="error" style={{ width: '100%' }}>Error! No data found!</Alert>
           </Grid>
         )}
       </Paper>
