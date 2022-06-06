@@ -73,3 +73,5 @@ export const countryCodes: readonly CountryCodes[] = [
   { code: 'YT', label: 'Mayotte' },
   { code: 'ZA', label: 'South Africa' },
 ];
+
+export default countryCodes
