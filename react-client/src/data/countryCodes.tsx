@@ -1,9 +1,9 @@
-interface CountryCodes {
+export interface iCountryCodes {
   code: string
   label: string
 }
 
-export const countryCodes: readonly CountryCodes[] = [
+export const countryCodes: iCountryCodes[] = [
   { code: 'AD', label: 'Andorra' },
   { code: 'AR', label: 'Argentina' },
   { code: 'AS', label: 'American Samoa' },
